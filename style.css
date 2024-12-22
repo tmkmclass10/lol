@@ -1,0 +1,306 @@
+ /* Body */
+ body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://img.freepik.com/free-photo/night-landscape-with-blue-sky_1048-5101.jpg?t=st=1729835515~exp=1729839115~hmac=8db668b051d10b193067f2916ac113642b6ba4b5116cf972f1e155d764255b06&w=1060') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.background-container {
+    position: relative;
+    overflow: hidden;
+    background: url('https://img.freepik.com/free-photo/night-landscape-with-blue-sky_1048-5101.jpg?t=st=1729835515~exp=1729839115~hmac=8db668b051d10b193067f2916ac113642b6ba4b5116cf972f1e155d764255b06&w=1060') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin-bottom: 60px;
+}
+
+/* Header */
+header {
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightblue;
+    animation: fadeIn 3s ease-in-out;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 100%;
+}
+
+/* মূল কনটেন্ট */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* গ্লাস বাক্স */
+.glass-box {
+    width: 80%;
+    max-width: 280px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgb(0, 102, 204) 0%, rgb(197, 0, 204) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 15px 3px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(154, 104, 214);
+    animation: rgbGlow 3s infinite alternate, gradientMove 3s ease infinite;
+}
+
+.glass-box:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 20px 3px rgba(255, 255, 255, 0.8);
+    background: rgb(100, 167, 235);
+    border-color: rgb(204, 0, 105);
+}
+
+/* Button */
+.btn {
+    display: flex;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: solid rgb(154, 104, 214);
+    font-family: "system-ui";
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    transition: 300ms;
+    width: 100%;
+    max-width: 335px;
+    box-shadow: rgb(255, 255, 255) 5px 5px 25px 5px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(0, 102, 204) 0%, rgb(197, 0, 204) 100%);
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    animation: gradientMove 3s ease infinite;
+}
+
+.btn:hover {
+    background: rgb(100, 167, 235);
+    border-color: rgb(204, 0, 105);
+    border-width: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+}
+
+/* অ্যানিমেশন */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes rgbGlow {
+    0% { color: rgb(0, 174, 255); text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.8); }
+    33% { color: rgb(42, 255, 106); text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8); }
+    66% { color: rgb(255, 255, 255); text-shadow: 0 0 5px rgba(0, 0, 255, 0.8), 0 0 10px rgba(0, 0, 255, 0.8); }
+    100% { color: rgb(208, 60, 253); text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.8); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Humberger dude */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; /* Google Font */
+  background-color: #f8f8f8; /* Light background for the body */
+}
+
+:root {
+  --bar-width: 45px; /* Reduced width */
+  --bar-height: 6px; /* Reduced height */
+  --hamburger-gap: 6px;
+  --foreground: white; /* Changed color to white */
+  --background: #333; /* Light background color for visibility */
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  top: var(--hamburger-margin);
+  left: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground: white;
+  --background: #333; /* Inverted color scheme on active state */
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+/* Glowing effect for the hamburger menu */
+.hamburger-menu::before,
+.hamburger-menu::after {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 20px #fff, 0 0 40px #fff, 0 0 60px #ff00ff;
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.sidebar {
+  transition: translate var(--animation-timing);
+  translate: -100%;
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  background-color: var(--foreground);
+  color: var(--background);
+  max-width: 10rem;
+  min-height: 100vh;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  translate: 0;
+}
+
+/* Links inside sidebar */
+.sidebar a {
+  color: var(--background);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+  color: white;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+}
+
