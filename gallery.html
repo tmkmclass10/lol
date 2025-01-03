@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-6399844237621973">
+    <link rel="canonical" href="https://tmkmclass10.xyz/">
+    <meta name="keywords" content="tmkm class 10, Class 10, tmkmclass10, class10, Tamirul Millat Kamil Madrasah", তামীরুল মিল্লাত কামিল মাদরাসা, মিল্লাত, মিল্লাত মাদরাসা>
+    <meta name="description" content="এই ওয়েবসাইটটি শিক্ষামূলক, বিশেষভাবে ১০ম শ্রেণির ছাত্রদের জন্য তৈরি। এটি তামিতুল মিল্লাত কামিল মাদরাসা ১০ম শ্রেণির ছাত্রদের জন্য উপযোগী। এখানে স্কুল এবং মাদরাসার সমস্ত ১০ম শ্রেণির বইয়ের পিডিএফ রয়েছে এবং সহায়ক অনেক শিক্ষামূলক ওয়েবসাইটের লিঙ্কও পাওয়া যাবে।">
+    <title>TMKM Gallery</title>
+    <link rel="icon" href="icon.jpg" type="image/png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6399844237621973"
+     crossorigin="anonymous"></script>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;  /* Dark background */
+    color: #e0e0e0;  /* Light text color */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Watermark styling */
+body::before {
+    content: "TMKM CLASS 10";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.1);  /* Light color with transparency */
+    pointer-events: none;  /* Prevent interaction with the watermark */
+    z-index: -1;  /* Place the watermark behind content */
+}
+
+
+        header {
+    text-align: center;
+}
+.centered-text {
+        font-size: 48px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, red, yellow, green, cyan, blue, magenta);
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-animation 3s infinite;
+        text-decoration: none;
+    }
+
+    @keyframes gradient-animation {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+        /* Gallery container */
+        .gallery-container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+    
+        /* Default flexbox for mobile */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+    
+        .gallery-item {
+            width: 100%; /* Stacked for mobile */
+            margin-bottom: 10px;
+        }
+    
+        /* Set a max-width for images and videos to prevent them from becoming too large */
+        .gallery img, .gallery iframe {
+            width: 100%;
+            max-width: 100%; /* Prevents scaling beyond container */
+            height: auto;
+            border-radius: 8px;
+        }
+    
+        /* Desktop layout: Images side by side in rows of 2 and videos side by side */
+        @media (min-width: 768px) {
+            /* Images: Two per row */
+            .gallery-item.image {
+                width: 48%; /* 2 images per row */
+            }
+    
+            /* Videos: Two per row */
+            .gallery-item.video {
+                width: 48%; /* 2 videos per row */
+            }
+    
+            /* Adjust iframe (video) layout to prevent distortion */
+            .gallery-item iframe {
+                height: 300px; /* Fixed height for iframe */
+            }
+        }
+    
+        footer {
+            background-color: rgba(0, 0, 0, 0.85);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+        }
+        /* From Uiverse.io by zymantas-katinas */ 
+.button {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+/* Shadow layer */
+.button .shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Edge layer */
+.button .edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+    to left,
+    hsl(217, 33%, 16%) 0%,
+    hsl(217, 33%, 32%) 8%,
+    hsl(217, 33%, 32%) 92%,
+    hsl(217, 33%, 16%) 100%
+  );
+}
+
+/* Front layer */
+.button .front {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  font-size: 1.25rem;
+  color: white;
+  background: hsl(217, 33%, 17%);
+  border-radius: 8px;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Hover and active states */
+.button:hover .shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:hover .front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button:active .shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.button:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+/* Disable text selection */
+.button .front span {
+  user-select: none;
+}
+
+    </style>
+    
+</head>
+<body>
+    <header><br><br>
+        <a href="index.html" class="centered-text">TMKM Class 10</a>
+    </header>
+
+<div class="gallery-container">
+    <div class="gallery">
+        <!-- Images -->
+        <div class="gallery-item image">
+            <img src="TMKM Madrasah.jpg" alt="Main Campus at Night">
+        </div>
+        <div class="gallery-item image">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipP3Q1VvbXlK_XoF9ytoFKUlGFlZa3SCLH0pOxRf=s680-w680-h510" alt="main Campus (outside) day">
+        </div>
+        <div class="gallery-item image">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipOsEdWkreWIXCmHT49uBYq_O_sfUn8niMk6SOqy=s680-w680-h510" alt="Hall Room">
+        </div>
+        <div class="gallery-item image">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipM4tA2vKGIl-7lD8TedhOFFAcJD7fFVTeFUN2yo=s680-w680-h510" alt="Class">
+        </div>
+        <div class="gallery-item image">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMGtJ__pi-Hr3Kf3tKT5csQ05L7nsa6a6SZmZMb=s680-w680-h510" alt="Main Campus day">
+        </div>
+        <div class="gallery-item image">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipMW85u8anrxR3TYXcfvIxIC9mFWmNTC_C1anYU4=s680-w680-h510" alt="Main idk">
+        </div>
+
+        <!-- Videos -->
+        <div class="gallery-item video">
+
+            <iframe width="895" 
+                height="703" 
+                src="https://www.youtube.com/embed/3KYhbJs-Xr4" 
+                title="তামিরুল মিল্লাত কামিল মাদ্রাসায় ২০২৫ ভর্তি সংক্রান্ত আপডেট।"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+
+            </iframe>
+        </div>
+        <div class="gallery-item video">
+        <iframe width="895" 
+                height="703" 
+                src="https://www.youtube.com/embed/XUHJ5D2McS0" 
+                title="Tamerul millat kamil madrasha doa onustan"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+
+            </iframe>
+        </div>
+        <div>
+            <iframe width="895" 
+            height="703" 
+            src="https://www.youtube.com/embed/ksml9mVLtlk" 
+            title="#tmkm Tamirul millat kamil madrasah jatrabari dhaka.তামীরুল মিল্লাত কামিল মাদ্রাসা যাএাবাড়ী ঢাকা ।" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+        <div>
+            <iframe width="895" 
+            height="703" 
+            src="https://www.youtube.com/embed/uiWZJOclc_c" 
+            title="Tamirul Millat Kamil Madrasah Jatrabari Dhaka @MsTv24Bangla" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+ 
+<a href="index.html"><button class="button">
+  <span class="shadow"></span>
+  <span class="edge"></span>
+  <div class="front">
+    <span>Go Back</span>
+  </div>
+</button>
+</a>
+
+<footer>
+    <p>&copy; 2025 Gallery. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-cuT6R5A8E66ELfL3+kZ6B2Ck/Tpdy9BJoBbwqkWFOaFoVwpjcR+gI0CnswY8GQ6x" crossorigin="anonymous"></script>
+
+</body>
+</html>
