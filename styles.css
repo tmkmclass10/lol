@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+a {
+    color: #e63946;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+/* Common Styles for Header */
+header {
+    background-color: #2b3d35;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000; /* Ensures header is above everything */
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f4a261;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    padding-top: 10px;
+}
+
+.nav-links a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #264653;
+    border-radius: 3px;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 1100; /* Ensures hamburger menu is always visible */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(29, 53, 87, 0.95);
+        padding: 20px;
+        box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5);
+        gap: 20px;
+        z-index: 1050; /* Ensures menu is above content */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #0d95b8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+footer a {
+    color: #f4a261;
+}
+
+footer a:hover {
+    color: #e76f51;
+}
