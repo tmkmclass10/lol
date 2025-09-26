@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #e0e0e0;
+    position: relative;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Animated Background Container */
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #121212, #1a2a3a);
+}
+
+/* Floating Educational Objects */
+.floating-object {
+    position: absolute;
+    opacity: 0.7;
+    animation: float 15s infinite ease-in-out;
+    z-index: 1;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.4;
+    }
+    25% {
+        transform: translateY(-20px) translateX(10px) rotate(5deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateY(-40px) translateX(-10px) rotate(-5deg);
+        opacity: 0.5;
+    }
+    75% {
+        transform: translateY(-20px) translateX(15px) rotate(3deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+        opacity: 0.4;
+    }
+}
+
+/* Anime Character Styles */
+.anime-character {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.character-body {
+    width: 100%;
+    height: 100%;
+    background-color: #ff9eaa;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.character-face {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 40%;
+}
+
+.character-eyes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.eye {
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    position: relative;
+}
+
+.eye::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.character-mouth {
+    width: 20px;
+    height: 10px;
+    border-bottom: 3px solid #000;
+    border-radius: 0 0 20px 20px;
+    margin: 0 auto;
+}
+
+.character-arms {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 20%;
+}
+
+.arm {
+    position: absolute;
+    width: 25px;
+    height: 8px;
+    background-color: #ff9eaa;
+    border-radius: 10px;
+}
+
+.arm-left {
+    left: -10px;
+    transform: rotate(-30deg);
+    animation: wave-left 2s infinite alternate;
+}
+
+.arm-right {
+    right: -10px;
+    transform: rotate(30deg);
+    animation: wave-right 2s infinite alternate;
+}
+
+@keyframes wave-left {
+    0% { transform: rotate(-30deg); }
+    100% { transform: rotate(-50deg); }
+}
+
+@keyframes wave-right {
+    0% { transform: rotate(30deg); }
+    100% { transform: rotate(50deg); }
+}
+
+.character-message {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: white;
+    color: #333;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.character-message::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+.anime-character:hover .character-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Character movement animation */
+.moving-character {
+    animation: move-around 20s infinite alternate ease-in-out;
+}
+
+@keyframes move-around {
+    0% {
+        bottom: 20px;
+        right: 20px;
+        transform: scale(1);
+    }
+    25% {
+        bottom: 100px;
+        right: 50%;
+        transform: scale(1.1);
+    }
+    50% {
+        bottom: 300px;
+        right: 30%;
+        transform: scale(0.9);
+    }
+    75% {
+        bottom: 150px;
+        right: 70%;
+        transform: scale(1.05);
+    }
+    100% {
+        bottom: 20px;
+        right: 20px;
+        transform: scale(1);
+    }
+}
+
+/* Common Styles for Header */
+header {
+    background-color: rgba(43, 61, 53, 0.9);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(244, 162, 97, 0.3);
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f4a261;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    padding-top: 10px;
+}
+
+.nav-links a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f4a261;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    background-color: transparent;
+    color: #f4a261;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    z-index: 1100;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1);
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100vh;
+        background-color: rgba(29, 53, 87, 0.95);
+        padding: 20px;
+        box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5);
+        gap: 20px;
+        z-index: 1050;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: slideIn 0.3s ease forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    /* Adjust anime character size for mobile */
+    .anime-character {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #0d95b8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+footer a {
+    color: #f4a261;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #e76f51;
+}
+
+.ad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+}

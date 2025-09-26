@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to TMKM Class 10's official website. Access routines, books, syllabi, and more for a seamless academic experience.">
+    <meta name="keywords" content="tmkmclass10, মিল্লাত মাদ্রাসাহ, TMKM, Class 10, মাদ্রাসা শিক্ষা, Class 10 syllabus, Class 10 books">
+    <meta name="author" content="Shafayat Amin">
+    <link rel="icon" href="tmkm logo pro.png" type="image/png">
+    <title>Shafu Practical Notes</title>
+    <link rel="stylesheet" href="practical.css">
+    <style>
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #bb86fc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+
+        .subject-buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 30px 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 20px 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--card-bg), #2a2a2a);
+            color: var(--text-color);
+            border: 1px solid rgba(255,255,255,0.1);
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        button:hover::before {
+            opacity: 0.8;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        button:active {
+            transform: translateY(-2px);
+        }
+
+        /* Add icons to buttons */
+        button span::before {
+            display: block;
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+
+        .biology span::before { content: "🧬"; }
+        .physics span::before { content: "⚛️"; }
+        .chemistry span::before { content: "🧪"; }
+        .math span::before { content: "📐"; }
+        .gallery span::before { content: "🖼️"; }
+
+        /* Gallery section styling */
+        .gallery-section {
+            margin-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .gallery-buttons {
+            display: flex;
+            justify-content: center;
+            padding: 30px 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Mobile responsiveness */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .subject-buttons {
+                grid-template-columns: repeat(4, 1fr);
+                max-width: 900px;
+                padding: 40px 20px;
+            }
+            
+            button {
+                padding: 25px 20px;
+            }
+
+            .gallery-buttons {
+                max-width: 900px;
+            }
+        }
+
+        /* Add a subtle animation to the page */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header, .subject-buttons, .gallery-section {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .subject-buttons button {
+            animation: fadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .subject-buttons button:nth-child(1) { animation-delay: 0.1s; }
+        .subject-buttons button:nth-child(2) { animation-delay: 0.2s; }
+        .subject-buttons button:nth-child(3) { animation-delay: 0.3s; }
+        .subject-buttons button:nth-child(4) { animation-delay: 0.4s; }
+        
+        .gallery-buttons button {
+            animation: fadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+            animation-delay: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Shafu Practical Notes</h1>
+        <p>Explore practical notes and visual gallery</p>
+    </header>
+    
+    <!-- Notes Section -->
+    <div class="notes-section">
+        <h2 class="section-title">Practical Notes</h2>
+        <div class="subject-buttons">
+            <button class="biology" onclick="location.href='biology.html'">
+                <span>Biology</span>
+            </button>
+            <button class="physics" onclick="location.href='physics.html'">
+                <span>Physics</span>
+            </button>
+            <button class="chemistry" onclick="location.href='chemistry.html'">
+                <span>Chemistry</span>
+            </button>
+            <button class="math" onclick="location.href='higher-math.html'">
+                <span>Higher Math</span>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Gallery Section -->
+    <div class="gallery-section">
+        <h2 class="section-title">Visual Gallery</h2>
+        <div class="gallery-buttons">
+            <button class="gallery" onclick="location.href='practicalgallery.html'">
+                <span>Practical Gallery</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="practical.js"></script>
+</body>
+</html>

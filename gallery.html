@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the TMKM Class 10 team with your queries or feedback. Fill out the form to reach us directly.">
+    <meta name="keywords" content="TMKM Class 10 Contact, Contact Form, TMKM Queries, Feedback">
+    <meta name="author" content="Shafayat Amin">
+    <link rel="icon" href="tmkm logo pro.png" type="image/png">
+    <title>Gallery - TMKM Class 10</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .prev { left: 0; }
+        .next { right: 0; }
+        .prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); }
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            cursor: pointer;
+            border-radius: 5px;
+            object-fit: cover;
+            transition: 0.3s;
+        }
+        .thumbnail:hover { transform: scale(1.1); }
+
+        /* Responsive Video Container */
+        .video-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 90%; /* Adjusts to screen width */
+            max-width: 800px; /* Prevents video from being too wide */
+            aspect-ratio: 16 / 9; /* Keeps video aspect ratio */
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 600px) {
+            .video-wrapper {
+                width: 100%;
+                max-width: 480px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">TMKM Class 10</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="routine.html">ক্লাস রুটিন</a></li>
+                <li><a href="books.html">সমস্ত বইয়ের PDF</a></li>
+                <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                <li><a href="contact.html">যোগাযোগ</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+    <h1>Gallery</h1>
+    <div class="slideshow-container">
+        <img class="slides" src="20251.png" alt="Image 1">
+        <img class="slides" src="20252.png" alt="Image 2">
+        <img class="slides" src="20253.png" alt="Image 3">
+        <img class="slides" src="20255.png" alt="Image 4">
+        <img class="slides" src="20256.png" alt="Image 5">
+        <img class="slides" src="6.jpg" alt="Image 6">
+        <img class="slides" src="7.jpg" alt="Image 7">
+        <img class="slides" src="8.jpg" alt="Image 8">
+        <img class="slides" src="9.jpg" alt="Image 9">
+        <img class="slides" src="10.jpg" alt="Image 10">
+        <img class="slides" src="11.jpg" alt="Image 11">
+        <img class="slides" src="12.jpg" alt="Image 12">
+        <img class="slides" src="13.jpg" alt="Image 13">
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <div class="thumbnail-container">
+        <img class="thumbnail" src="20251.png" onclick="currentSlide(1)">
+        <img class="thumbnail" src="20252.png" onclick="currentSlide(2)">
+        <img class="thumbnail" src="20253.png" onclick="currentSlide(3)">
+        <img class="thumbnail" src="20255.png" onclick="currentSlide(4)">
+        <img class="thumbnail" src="20256.png" onclick="currentSlide(5)">
+        <img class="thumbnail" src="6.jpg" onclick="currentSlide(6)">
+        <img class="thumbnail" src="7.jpg" onclick="currentSlide(7)">
+        <img class="thumbnail" src="8.jpg" onclick="currentSlide(8)">
+        <img class="thumbnail" src="9.jpg" onclick="currentSlide(9)">
+        <img class="thumbnail" src="10.jpg" onclick="currentSlide(10)">
+        <img class="thumbnail" src="11.jpg" onclick="currentSlide(11)">
+        <img class="thumbnail" src="12.jpg" onclick="currentSlide(12)">
+        <img class="thumbnail" src="13.jpg" onclick="currentSlide(13)">
+    </div><br><br><br><br><br><br>
+
+    <h1>Video Gallery</h1>
+
+    <div class="video-container">
+        <!-- Video 1 -->
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/4Kl1Acopsv8" 
+                title="Tamirul Millat Kamil Madrasah 2025 Study Tour." 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Add More Videos Here -->
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/rYO8NCTfznA" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/XhDh1swZSiU" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/PA_FRBpdL68" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/V9K7t0T6SJQ" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/QB9rwakJw5g" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/AfW4FiddOLY" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/fLURlMbe5sk" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+
+          <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/sZgr2tPdaSk" 
+                title="Another Video" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 TMKM Class 10 | <a href="privacy.html">গোপনীয়তা নীতি</a> | <a href="terms.html">শর্তাবলী</a></p>
+            <p>ডেভেলপার যোগাযোগ: <a href="mailto:shafayatamin0010@gmail.com">shafayatamin0010@gmail.com</a> | ফোন: 01870746153</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        function changeSlide(n) {
+            slideIndex += n;
+            showSlides();
+        }
+    
+        function currentSlide(n) {
+            slideIndex = n - 1;
+            showSlides();
+        }
+    
+        function showSlides() {
+            let slides = document.getElementsByClassName("slides");
+            for (let slide of slides) {
+                slide.style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 1.4 seconds
+        }
+    </script>
+    
+
+    <script async="async" data-cfasync="false" src="//pl25825700.effectiveratecpm.com/809907b84627aab77766b2904e195c47/invoke.js"></script>
+<div id="container-809907b84627aab77766b2904e195c47"></div>
+
+        <script src="script.js"></script>
+</body>
+</html>
