@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact the TMKM Class 10 team with your queries or feedback. Fill out the form to reach us directly.">
+    <meta name="keywords" content="TMKM Class 10 Contact, Contact Form, TMKM Queries, Feedback">
+    <meta name="author" content="Shafayat Amin">
+    <link rel="icon" href="tmkm logo pro.png" type="image/png">
+    <title>Contact Us - TMKM Class 10</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .contact-container {
+            padding: 20px;
+            background-color: #1d3557;
+            color: white;
+            min-height: calc(100vh - 100px); /* Adjust for header and footer */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-heading {
+            font-size: 2.5rem;
+            color: #f4a261;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form {
+            background-color: rgba(244, 162, 97, 0.1);
+            border: 2px solid #f4a261;
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-form label {
+            font-size: 1rem;
+            color: #f4a261;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #f4a261;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #1d3557;
+            background-color: white;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 10px 15px;
+            background-color: #f4a261;
+            color: #1d3557;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #e76f51;
+            color: white;
+        }
+
+        .success-message {
+            color: #2a9d8f;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="logo">TMKM Class 10</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="routine.html">ক্লাস রুটিন</a></li>
+                <li><a href="books.html">সমস্ত বইয়ের PDF</a></li>
+                <li><a href="about.html">আমাদের সম্পর্কে</a></li>
+                <li><a href="contact.html">যোগাযোগ</a></li>
+            </ul>
+        </nav>
+    
+    </header>
+
+    <div class="contact-container">
+        <h1 class="contact-heading">আমাদের সাথে যোগাযোগ করুন</h1>
+
+    
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="6496f697-169a-4bdc-a82b-4a6273b2eef7">
+    
+            <!-- Name Input -->
+            <label for="name">নাম</label>
+            <input type="text" id="name" name="name" placeholder="আপনার পুরো নাম লিখুন" required>
+    
+            <!-- Group Selection -->
+            <label for="group">গ্রুপ</label>
+            <select id="group" name="group" required>
+                <option value="" disabled selected>আপনার গ্রুপ নির্বাচন করুন</option>
+                <option value="science">Science</option>
+                <option value="arts">Arts</option>
+            </select>
+    
+            <!-- Section Selection -->
+            <label for="section">Section</label>
+            <select id="section" name="section" required>
+                <option value="" disabled selected>আপনার শাখা নির্বাচন করুন</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+            </select>
+    
+            <!-- Roll Input -->
+            <label for="roll">Roll</label>
+            <input type="text" id="roll" name="roll" placeholder="আপনার রোল নম্বর লিখুন" required>
+    
+            <!-- Email Input -->
+            <label for="email">ই-মেইল</label>
+            <input type="email" id="email" name="email" placeholder="আপনার ইমেইল ঠিকানা লিখুন" required>
+    
+            <!-- Message Input -->
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="আপনার বার্তা বা প্রশ্ন লিখুন" required></textarea>
+    
+            <!-- Honeypot Spam Protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+    
+            <!-- Redirect Field -->
+            <input type="hidden" name="redirect" value="https://tmkmclass10.xyz/thank-you.html">
+    
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+    <!-- Elfsight WhatsApp Chat | TMKM Class 10 -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-4a84a68d-e5fe-41a4-b65d-88b75e732c48" data-elfsight-app-lazy></div>
+    
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 TMKM Class 10 | <a href="privacy.html">গোপনীয়তা নীতি</a> | <a href="terms.html">শর্তাবলী</a></p>
+            <p>ডেভেলপার যোগাযোগ: <a href="mailto:shafayatamin0010@gmail.com">shafayatamin0010@gmail.com</a> | ফোন: 01870746153</p>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

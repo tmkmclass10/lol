@@ -1,0 +1,188 @@
+/* General Body Styling */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+body {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #173c5a;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+}
+
+.routine-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    margin: 20px auto;
+    width: 90%;
+}
+
+
+.routine-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.routine-table th, .routine-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.routine-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.routine-table th:first-child {
+    background-color: #add8e6; 
+}
+
+.routine-table th:nth-child(2), .routine-table th:nth-child(3),
+.routine-table th:nth-child(4), .routine-table th:nth-child(5),
+.routine-table th:nth-child(6), .routine-table th:nth-child(7),
+.routine-table th:nth-child(8), .routine-table th:nth-child(9) {
+    background-color: #ffff99; /* Yellow */
+}
+
+.routine-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.routine-table tbody tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.routine-table td {
+    color: #555;
+}
+
+.routine-table .tiffin {
+    transform: rotate(-90deg);
+    font-weight: bold;
+    font-style: italic;
+    writing-mode: vertical-lr;
+    color: #000;
+}
+
+
+header {
+    background-color: #2b3d35;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f4a261;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+    padding-top: 10px;
+}
+
+.nav-links a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #264653;
+    border-radius: 3px;
+}
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #1d3557;
+        padding: 15px;
+        border-radius: 5px;
+        gap: 20px;
+        width: 80%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .routine-table-wrapper {
+        margin: 20px auto;
+        width: 90%;
+    }
+
+    .routine-table {
+        white-space: nowrap;
+    }
+}
+
+
+footer {
+    background-color: #0d95b8;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-top: auto; 
+}
+
+footer a {
+    color: #f4a261;
+}
+
+footer a:hover {
+    color: #e76f51;
+}
